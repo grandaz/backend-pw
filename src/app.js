@@ -17,5 +17,7 @@ app.get('/', (req, res) => {
 app.use("/usuario", libroRoutes)
 app.use("/libro", alumnoRoutes)
 app.use("/reserva", reservaRoutes)
+app.use("/tipoDoc", reservaRoutes)
+app.use("/tipoUsuario", reservaRoutes)
 
 export default app;
