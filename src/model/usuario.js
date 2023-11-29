@@ -20,11 +20,11 @@ const Usuario = sequelize.define('usuario', {
     fotoUrl: {
         type: DataTypes.TEXT
     },
-    tipoUsuario: {
-        type: DataTypes.STRING(30)
+    idTipoUsuario: {
+        type: DataTypes.INTEGER
     },
     idTipoDoc: {
-        type: DataTypes.STRING(5)
+        type: DataTypes.INTEGER
     },
     nroDoc: {
         type: DataTypes.STRING(10)
@@ -37,12 +37,12 @@ const Usuario = sequelize.define('usuario', {
     }
 })
 
-Usuario.belongsTO(TipoDoc, {
+Usuario.belongsTo(TipoDoc, {
     foreignKey: 'idTipoDOc',
     targetId: 'id'
 })
 
-Usuario.belongsTO(TipoUsuario, {
+Usuario.belongsTo(TipoUsuario, {
     foreignKey: 'idTipoUsuario',
     targetId: 'id'
 })

@@ -1,15 +1,40 @@
-POST http://localhost:3001/matricula
+GET http://localhost:3001/usuario
+#######
+
+GET http://localhost:3001/usuario/1
+
+#######
+POST http://localhost:3001/usuario
 Content-Type: application/json
 
 {
-    "fechaMatricula": "2023-01-01",
-    "idAlumno": 1,
-    "cursos": [
-        {
-            "id": 1
-        },
-        {
-            "id": 2
-        }
-    ]
+    "id": 1,
+    "nombres": "Pedro Javier",
+    "apellidos": "Gomez Zevallos",
+    "fotoUrl": "urldefoto",
+    "tipoUsuario": 1,
+    "idTipoDoc": 1,
+    "nroDoc": "24384859",
+    "correo": "pedro@gmail.com",
+    "contrasena": "12345"
 }
+
+######
+
+PUT http://localhost:3001/usuario
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nombres": "Pedro Javier",
+    "apellidos": "Gomez Zevallos",
+    "fotoUrl": "urldefoto",
+    "tipoUsuario": 1,
+    "idTipoDoc": 1,
+    "nroDoc": "24384859",
+    "correo": "pedro@gmail.com",
+    "contrasena": "12345"
+}
+
+######
+DELETE http://localhost:3001/usuario/1

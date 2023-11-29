@@ -1,6 +1,6 @@
 import express from 'express'
 
-import controller from '../controllers/tipoUser.js'
+import controller from '../controllers/tipoUsuario.js'
 
 const routes = express.Router()
 

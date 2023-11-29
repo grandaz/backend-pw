@@ -1,29 +1,34 @@
-GET http://localhost:3001/alumno
+GET http://localhost:3001/reserva
 #######
 
-GET http://localhost:3001/alumno/1
+GET http://localhost:3001/reserva/1
 
 #######
-POST http://localhost:3001/alumno
+POST http://localhost:3001/reserva
 Content-Type: application/json
 
 {
-    "nombre": "Juan",
-    "apellido": "Lopez",
-    "idCarrera": 1
+    "id": 1,
+    "idUsuario": 1,
+    "idLibro": 1,
+    "fechaReserva": "2023-11-29 14:39:28.204-05",
+    "fechaDevolucion": "2023-11-29 14:39:28.204-05",
+    "estado": "1"
 }
 
 ######
 
-PUT http://localhost:3001/alumno
+PUT http://localhost:3001/reserva
 Content-Type: application/json
 
 {
-    "id": 2,
-    "nombre": "Ana Lucia",
-    "apellido": "Mendez",
-    "curso": "Derecho Penal"
+    "id": 1,
+    "idUsuario": 1,
+    "idLibro": 1,
+    "fechaReserva": "29/11/2023",
+    "fechaDevolucion": "29/11/2023",
+    "estado": "1"
 }
 
 ######
-DELETE http://localhost:3001/alumno/1
+DELETE http://localhost:3001/reserva/1

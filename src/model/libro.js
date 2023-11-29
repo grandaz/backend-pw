@@ -1,8 +1,6 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.js';
 
-import Reserva from './reserva.js'
-
 const Libro = sequelize.define('libro', {
     id: {
         type: DataTypes.INTEGER,
@@ -28,7 +26,7 @@ const Libro = sequelize.define('libro', {
     encuadernacion: {
         type: DataTypes.STRING(250)
     },
-    imagenPotadaUrl: {
+    imagenPortadaUrl: {
         type: DataTypes.STRING(250)
     },
     vecesReservado: {
@@ -39,9 +37,4 @@ const Libro = sequelize.define('libro', {
     }
 })
 
-Libro.belongsTo(Reserva, {
-    foreignKey: 'id',
-    targetId: 'idLibro'
-})
-
-export default Reserva;
+export default Libro;

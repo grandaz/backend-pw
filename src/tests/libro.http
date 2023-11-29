@@ -1,30 +1,42 @@
-GET http://localhost:3001/docente
+GET http://localhost:3001/libro
 #######
 
-GET http://localhost:3001/docente/4
+GET http://localhost:3001/libro/1
 
 #######
-POST http://localhost:3001/docente
+POST http://localhost:3001/libro
 Content-Type: application/json
 
 {
-    "id": 3,
-    "nombre": "Pedro",
-    "apellido": "Gomez",
-    "curso": "Arquitectura de Datos"
+    "id": 1,
+    "titulo": "libro 1",
+    "autor": "Gomez",
+    "serie": "Arquitectura de Datos",
+    "isbn13": "24",
+    "categorias": "",
+    "encuadernacion": "",
+    "imagenPortadaUrl": "",
+    "vecesReservado": 1,
+    "available": true
 }
 
 ######
 
-PUT http://localhost:3001/docente
+PUT http://localhost:3001/libro
 Content-Type: application/json
 
 {
-    "id": 2,
-    "nombre": "Sandra Betty",
-    "apellido": "Sanchez",
-    "curso": "Derecho Penal"
+    "id": 1,
+    "titulo": "libro 1",
+    "autor": "Gomez",
+    "serie": "Arquitectura de Datos",
+    "isbn13": "24",
+    "categorias": "",
+    "encuadernacion": "",
+    "imagenPortadaUrl": "",
+    "vecesReservado": 1,
+    "available": true
 }
 
 ######
-DELETE http://localhost:3001/docente/1
+DELETE http://localhost:3001/libro/1

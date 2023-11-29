@@ -1,0 +1,26 @@
+GET http://localhost:3001/tipoDoc
+#######
+
+GET http://localhost:3001/tipoDoc/1
+
+#######
+POST http://localhost:3001/tipoDoc
+Content-Type: application/json
+
+{
+    "id": 2,
+    "nombre": "Pasaporte"
+}
+
+######
+
+PUT http://localhost:3001/tipoDoc
+Content-Type: application/json
+
+{
+    "id": 2,
+    "nombre": "Pasaporte"
+}
+
+######
+DELETE http://localhost:3001/tipoDoc/1

@@ -2,6 +2,7 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.js';
 
 import Usuario from './usuario.js'
+import Libro from './libro.js'
 
 const Reserva = sequelize.define('reserva', {
     id: {
@@ -31,10 +32,10 @@ Reserva.belongsTo(Usuario, {
     foreignKey: 'idUsuario',
     targetId: 'id'
 })
-/*
-Reserva.hasOne(Libro, {
+
+Reserva.belongsTo(Libro, {
     foreignKey: 'idLibro',
     targetId: 'id'
 })
-*/
+
 export default Reserva;
