@@ -31,6 +31,9 @@ const Libro = sequelize.define('libro', {
     imagenPotadaUrl: {
         type: DataTypes.STRING(250)
     },
+    vecesReservado: {
+        type: DataTypes.INTEGER
+    },
     available: {
         type: DataTypes.BOOLEAN
     }

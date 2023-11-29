@@ -1,7 +1,8 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../config/database.js'
 
-import Reserva from './reserva.js'
+import TipoDoc from './tipoDoc.js'
+import TipoUsuario from './tipoUsuario.js'
 
 const Usuario = sequelize.define('usuario', {
     id: {
@@ -35,10 +36,15 @@ const Usuario = sequelize.define('usuario', {
         type: DataTypes.STRING(100)
     }
 })
-/*
-Usuario.hasMany(Reserva, {
-    foreignKey: 'id',
-    targetId: 'idUsuario'
+
+Usuario.belongsTO(TipoDoc, {
+    foreignKey: 'idTipoDOc',
+    targetId: 'id'
 })
-*/
+
+Usuario.belongsTO(TipoUsuario, {
+    foreignKey: 'idTipoUsuario',
+    targetId: 'id'
+})
+
 export default Usuario
