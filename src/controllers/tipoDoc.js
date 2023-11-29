@@ -1,5 +1,5 @@
 import RepositoryBase from "../repository/base.js";
-import modelo from '../model/usuario.js'
+import modelo from '../model/tipoDoc.js'
 
 const repository = new RepositoryBase(modelo);
 
