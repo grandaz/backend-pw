@@ -1,10 +1,10 @@
-GET http://localhost:3001/tipoDoc
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoDoc
 #######
 
-GET http://localhost:3001/tipoDoc/1
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoDoc/1
 
 #######
-POST http://localhost:3001/tipoDoc
+POST https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoDoc
 Content-Type: application/json
 
 {
@@ -14,7 +14,7 @@ Content-Type: application/json
 
 ######
 
-PUT http://localhost:3001/tipoDoc
+PUT https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoDoc
 Content-Type: application/json
 
 {
@@ -23,4 +23,4 @@ Content-Type: application/json
 }
 
 ######
-DELETE http://localhost:3001/tipoDoc/1
+DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoDoc/1
