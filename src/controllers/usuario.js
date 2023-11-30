@@ -1,5 +1,6 @@
 import RepositoryBase from "../repository/base.js";
 import modelo from '../model/usuario.js'
+import Usuario from "../model/usuario.js";
 
 const repository = new RepositoryBase(modelo);
 
@@ -48,6 +49,34 @@ const remove = async (req,res) => {
         return res.status(500).json({ message: 'No encontrado.'})
 }
 
-const controller = { findAll, create, findOne, update, remove }
+export const Login = async (req, res) => {
+    try {
+      const { correo, contrasena } = req.body;
+  
+      // Valida si existe el usuario con el correo proporcionado
+      const usuario = await Usuario.findOne({ where: { correo } });
+  
+      if (!usuario) {
+        return res.status(404).json({ success: false, message: "Usuario no encontrado", data: null });
+      }
+  
+      // Valida la contraseña
+      if (contrasena !== usuario.contrasena) {
+        return res.status(400).json({ success: false, message: "Contraseña incorrecta", data: null });
+      }
+  
+      return res.status(200).json({ success: true, message: "Usuario logueado correctamente", data: null });
+    } catch (err) {
+      console.error(err);
+      return res.status(500).json({ success: false, message: "Error al loguear el usuario", data: null });
+    }
+  };
+  
+  
+  
+
+
+
+const controller = { findAll, create, findOne, update, remove}
 
 export default controller;
