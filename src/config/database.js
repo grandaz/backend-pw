@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize'
 
-const hostname = '127.0.0.1'
-const username = 'postgres'
-const password = 'admin'
+const hostname = 'ggranda-20232-prograweb-db.postgres.database.azure.com'
+const username = 'postgre'
+const password = 'Password123'
 const database = 'prograweb'
 const dbPort = 5432
 const dialect = 'postgres'
