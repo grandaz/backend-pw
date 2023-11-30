@@ -1,10 +1,20 @@
-GET http://localhost:3001/tipoUsuario
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoUsuario
 #######
 
-GET http://localhost:3001/tipoUsuario/1
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoUsuario/1
 
 #######
-POST http://localhost:3001/tipoUsuario
+POST https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoUsuario
+Content-Type: application/json
+
+{
+    "id": 2,
+    "nombre": "Administrador"
+}
+
+######
+
+PUT https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoUsuario
 Content-Type: application/json
 
 {
@@ -13,14 +23,4 @@ Content-Type: application/json
 }
 
 ######
-
-PUT http://localhost:3001/tipoUsuario
-Content-Type: application/json
-
-{
-    "id": 1,
-    "nombre": "Alumno"
-}
-
-######
-DELETE http://localhost:3001/tipoUsuario/2
+DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/tipoUsuario/2

@@ -1,10 +1,10 @@
-GET http://localhost:3001/libro
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro
 #######
 
-GET http://localhost:3001/libro/1
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro/1
 
 #######
-POST http://localhost:3001/libro
+POST https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 
 ######
 
-PUT http://localhost:3001/libro
+PUT https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro
 Content-Type: application/json
 
 {
@@ -39,4 +39,4 @@ Content-Type: application/json
 }
 
 ######
-DELETE http://localhost:3001/libro/1
+DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro/1

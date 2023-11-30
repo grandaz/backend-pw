@@ -1,10 +1,10 @@
-GET http://localhost:3001/reserva
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/reserva
 #######
 
-GET http://localhost:3001/reserva/1
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/reserva/1
 
 #######
-POST http://localhost:3001/reserva
+POST https://ggranda-20232-prograweb-as-api.azurewebsites.net/reserva
 Content-Type: application/json
 
 {
@@ -18,7 +18,7 @@ Content-Type: application/json
 
 ######
 
-PUT http://localhost:3001/reserva
+PUT https://ggranda-20232-prograweb-as-api.azurewebsites.net/reserva
 Content-Type: application/json
 
 {
@@ -31,4 +31,4 @@ Content-Type: application/json
 }
 
 ######
-DELETE http://localhost:3001/reserva/1
+DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/reserva/1
