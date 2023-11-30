@@ -38,7 +38,7 @@ const Usuario = sequelize.define('usuario', {
 })
 
 Usuario.belongsTo(TipoDoc, {
-    foreignKey: 'idTipoDOc',
+    foreignKey: 'idTipoDoc',
     targetId: 'id'
 })
 
