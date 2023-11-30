@@ -34,6 +34,17 @@ const Usuario = sequelize.define('usuario', {
     },
     contrasena: {
         type: DataTypes.STRING(100)
+    },
+    idioma: {
+        type: DataTypes.STRING(40)
+    }
+    ,
+    prefijo: {
+        type: DataTypes.STRING(40)
+    }
+    ,
+    color: {
+        type: DataTypes.STRING(40)
     }
 })
 

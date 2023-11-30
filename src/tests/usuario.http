@@ -16,7 +16,10 @@ Content-Type: application/json
     "idTipoDoc": 1,
     "nroDoc": "24384859",
     "correo": "pedro@gmail.com",
-    "contrasena": "12345"
+    "contrasena": "12345",
+    "idioma": "español",
+    "prefijo": "nose",
+    "color": "rojo"
 }
 
 ######
@@ -33,7 +36,10 @@ Content-Type: application/json
     "idTipoDoc": 1,
     "nroDoc": "24384859",
     "correo": "pedro@gmail.com",
-    "contrasena": "12345"
+    "contrasena": "12345",
+    "idioma": "español",
+    "prefijo": "nose",
+    "color": "rojo"
 }
 
 ######
