@@ -15,9 +15,9 @@ const create = async (req,res) => {
     return res.status(200).json(result);
 }
 
-const findOne = (req,res) => {
+const findOne = async (req,res) => {
     const id = req.params.id;
-    const result = repository.findOne(id);
+    const result = await repository.findOne(id);
 
     if (result)
         return res.status(200).json(result);
@@ -26,8 +26,8 @@ const findOne = (req,res) => {
 
 }
 
-const update = (req,res) => {
-    const result = repository.update(req.body);
+const update = async (req,res) => {
+    const result = await repository.update(req.body);
 
     if (result)
         return res.status(200).json(result);
@@ -35,10 +35,10 @@ const update = (req,res) => {
         return res.status(500).json({ message: 'No encontrado.'})
 }
 
-const remove = (req,res) => {
+const remove = async (req,res) => {
     const id = req.params.id;
     
-    const result = repository.remove(id);
+    const result = await repository.remove(id);
 
     if (result)
         return res.status(200).json(result);
@@ -46,8 +46,8 @@ const remove = (req,res) => {
         return res.status(500).json({ message: 'No encontrado.'})
 }
 
-const findAllComplete = (req,res) => {
-    const result = service.findAllComplete();
+const findAllComplete = async (req,res) => {
+    const result = await service.findAllComplete();
 
     if (result)
         return res.status(200).json(result);

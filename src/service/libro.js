@@ -1,3 +1,4 @@
+/*
 import reservaRepository from '../repository/reserva.js'
 import usuarioModel from '../model/usuario.js'
 import libroModel from '../model/libro.js'
@@ -6,7 +7,7 @@ import RepositoryBase from '../repository/base.js'
 const usuarioRepository = new RepositoryBase(usuarioModel)
 const libroRepository = new RepositoryBase(libroModel)
 
-const findAllComplete = async () => {
+const findOneComplete = async (req, res) => {
     const reservas = await reservaRepository.findAll()
     const usuarios = await usuarioRepository.findAll()
     const libros = await libroRepository.findAll()
@@ -26,6 +27,7 @@ const findAllComplete = async () => {
     return newReservas
 }
 
-const service = { findAllComplete }
+const service = { findOneComplete }
 
 export default service
+*/

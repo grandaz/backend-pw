@@ -32,3 +32,6 @@ Content-Type: application/json
 
 ######
 DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/reserva/1
+
+#########
+GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/reserva/findAllComplete

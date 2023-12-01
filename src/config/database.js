@@ -7,6 +7,7 @@ const database = 'prograweb'
 const dbPort = 5432
 const dialect = 'postgres'
 
+
 const sequelize = new Sequelize(database, username, password, {
     host: hostname,
     port: dbPort,

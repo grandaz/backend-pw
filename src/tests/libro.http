@@ -39,4 +39,4 @@ Content-Type: application/json
 }
 
 ######
-DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro/1
+DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro/5
