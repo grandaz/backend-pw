@@ -71,7 +71,8 @@ const login = async (req, res) => {
       message: "Usuario logueado correctamente",
       data: {
         id: usuario.id,
-        nombre: usuario.nombre,
+        nombres: usuario.nombres,
+        apellidos: usuario.apellidos,
         correo: usuario.correo,
         fotoUrl: usuario.fotoUrl,
         idTipoUsuario: usuario.idTipoUsuario,
