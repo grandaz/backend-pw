@@ -49,7 +49,7 @@ const remove = async (req,res) => {
         return res.status(500).json({ message: 'No encontrado.'})
 }
 
-export const Login = async (req, res) => {
+const login = async (req, res) => {
     try {
       const { correo, contrasena } = req.body;
   
@@ -77,6 +77,6 @@ export const Login = async (req, res) => {
 
 
 
-const controller = { findAll, create, findOne, update, remove}
+const controller = { findAll, create, findOne, update, remove, login}
 
 export default controller;

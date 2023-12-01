@@ -1,28 +1,23 @@
-// Hcaer findAllComplete de reserva
-/*
-import alumnoRepository from '../repository/alumno.js'
-import carreraRepository from '../repository/carrera.js'
-import cursoRepository from '../repository/curso.js';
+import reservaRepository from '../repository/reserva.js'
+import usuarioRepository from '../repository/usuario.js'
+import libroRepository from '../repository/libro.js'
 
 const findAllComplete = () => {
-    const matriculas = matriculaRepository.findAll();
-    const alumnos = alumnoRepository.findAll();
-    const carrera = carreraRepository.findAll();
-    const allCursos = cursoRepository.findAll();
+    const reservas = reservaRepository.findAll();
+    const usuarios = usuarioRepository.findAll();
+    const libros = libroRepository.findAll();
 
-    const newMatriculas = matriculas.map(item => {
-        return {...item, alumno: alumnos.filter(x => x.id === item.alumno?.id)[0],
-        carrera: carrera.filter(x => x.id === item.carrera?.id)[0],
-        cursos: item.cursos?.map(cur => {
-            return allCursos.filter(x => x.id === cur.id)[0];
-        })
-    }
+    const newReservas = reservas.map(item => {
+        return {
+            ...item,
+            usuario: usuarios.find(x => x.id === item.idAlumno),
+            libro: libros.find(x => x.id === item.idLibro)
+        }
     })
 
-    return newMatriculas;
+    return newReservas
 }
 
 const service = { findAllComplete }
 
 export default service
-*/

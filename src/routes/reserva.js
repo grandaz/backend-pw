@@ -5,7 +5,7 @@ import controller from '../controllers/reserva.js'
 const routes = express.Router()
 
 routes.get('/', controller.findAll ) 
-//routes.get('/findAllComplete', controller.findAllComplete )
+routes.get('/findAllComplete', controller.findAllComplete )
 routes.post('/', controller.create )
 routes.get('/:id', controller.findOne )
 routes.put('/', controller.update )
