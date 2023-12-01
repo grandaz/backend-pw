@@ -65,7 +65,7 @@ const login = async (req, res) => {
         return res.status(400).json({ success: false, message: "Contraseña incorrecta", data: null });
       }
   
-      return res.status(200).json({ success: true, message: "Usuario logueado correctamente", data: null });
+      return res.status(200).json({ success: true, message: "Usuario logueado correctamente", data: {usuario} });
     } catch (err) {
       console.error(err);
       return res.status(500).json({ success: false, message: "Error al loguear el usuario", data: null });
