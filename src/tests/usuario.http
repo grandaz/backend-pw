@@ -12,7 +12,7 @@ Content-Type: application/json
     "nombres": "George Patrick",
     "apellidos": "Granda Zapata",
     "fotoUrl": "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Ftfu8ilrr1w6a1.png",
-    "tipoUsuario": 2,
+    "idTipoUsuario": 2,
     "idTipoDoc": 1,
     "nroDoc": "24384859",
     "correo": "george@gmail.com",

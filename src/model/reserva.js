@@ -32,10 +32,13 @@ Reserva.belongsTo(Usuario, {
     foreignKey: 'idUsuario',
     targetId: 'id'
 })
-
+/*
+Libro.hasMany(Reserva, { foreignKey: 'idLibro', onDelete: 'CASCADE' });
 Reserva.belongsTo(Libro, {
     foreignKey: 'idLibro',
     targetId: 'id'
 })
+*/
+
 
 export default Reserva;

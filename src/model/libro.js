@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.js';
+import Reserva from './reserva.js'
 
 const Libro = sequelize.define('libro', {
     id: {
@@ -36,5 +37,7 @@ const Libro = sequelize.define('libro', {
         type: DataTypes.BOOLEAN
     }
 })
+
+Libro.hasMany(Reserva, { foreignKey: 'idLibro', onDelete: 'CASCADE' });
 
 export default Libro;
