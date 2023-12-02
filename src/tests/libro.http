@@ -43,4 +43,4 @@ DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro/5
 
 
 ####
-GET https://ggranda-20232-prograweb-as-api.azurewebsites.net/libro/findOneComplete/23
+GET http://localhost:3001/libro/findOneComplete/23
