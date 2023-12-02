@@ -9,5 +9,6 @@ routes.post('/', controller.create )
 routes.get('/:id', controller.findOne )
 routes.put('/', controller.update )
 routes.delete('/:id', controller.remove)
+routes.get('/findOneComplete/:id', controller.findOneComplete )
 
 export default routes

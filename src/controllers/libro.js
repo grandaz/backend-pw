@@ -1,5 +1,6 @@
 import RepositoryBase from "../repository/base.js";
 import modelo from '../model/libro.js'
+import service from '../service/libro.js'
 
 const repository = new RepositoryBase(modelo);
 
@@ -19,6 +20,7 @@ const create = async (req,res) => {
 
 const findOne = async (req,res) => {
     const id = req.params.id;
+
     const result = await repository.findOne(id);
 
     if (result)
@@ -48,6 +50,18 @@ const remove = async (req,res) => {
         return res.status(500).json({ message: 'No encontrado.'})
 }
 
-const controller = { findAll, create, findOne, update, remove }
+const findOneComplete = async (req,res) => {
+    const id = req.params.id;
+
+    const result = await service.findOneComplete(id);
+
+    if (result)
+        return res.status(200).json(result);
+    else
+        return res.status(500).json({ message: 'No encontrado.'})
+
+}
+
+const controller = { findAll, create, findOne, update, remove, findOneComplete }
 
 export default controller;
