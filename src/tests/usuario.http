@@ -44,3 +44,30 @@ Content-Type: application/json
 
 ######
 DELETE https://ggranda-20232-prograweb-as-api.azurewebsites.net/usuario/1
+
+#####
+POST https://ggranda-20232-prograweb-as-api.azurewebsites.net/login
+Content-Type: application/json
+
+{
+    "correo": "hola@gmail.com",
+    "contrasena": "1234"
+}
+
+
+
+###############
+{
+    "id": 1,
+    "nombres": "George Patrick",
+    "apellidos": "Granda Zapata",
+    "fotoUrl": "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Ftfu8ilrr1w6a1.png",
+    "idTipoUsuario": 2,
+    "idTipoDoc": 1,
+    "nroDoc": "24384859",
+    "correo": "george@gmail.com",
+    "contrasena": "12345",
+    "idioma": "español",
+    "prefijo": "SHE/HER",
+    "color": "rojo"
+}
